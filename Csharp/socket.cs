@@ -1,3 +1,25 @@
+/////////////////////////////////////////
+/////////check is fully connected////////
+void checkSocketIsConnected(Object data)
+{
+	Utils.LogLine("checkSocketIsAlive", true);
+	while (true)
+	{
+		Thread.Sleep(Program.RECONNECT_WAIT_MS);
+		if (!clientSocket.Connected || (clientSocket.Poll(100, SelectMode.SelectRead) && clientSocket.Available == 0))
+		{
+			Utils.LogLine("Disconnected, retry...", true);
+			StartClient();
+			break;
+		}
+		else
+		{
+			Utils.LogLine("Connected.", true);
+		}
+			
+	}
+}
+
 //////////////////////////////////////////
 /////// create socket byass proxy1 ////////
 Uri testUri = new Uri("http://ip or host:port");
