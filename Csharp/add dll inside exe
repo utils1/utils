@@ -3,11 +3,18 @@
   PM> Install-Package Fody
   PM> Install-Package Costura.Fody
 
--check it is added to your project.
+-check it has been added to your project.
+
+-create new file in root of your project with name "FodyWeavers.xml" and copy following 4 lones to it:
+<?xml version="1.0" encoding="utf-8"?>
+<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura />
+</Weavers>
+
 -rebuild
 
 -if error in: None Update
-  change to: None Include
+  change it to: None Include
 
 
 */
