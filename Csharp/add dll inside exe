@@ -1,0 +1,14 @@
+/*
+-Install the Costura.Fody NuGet package and update the Fody NuGet package:
+  PM> Install-Package Fody
+  PM> Install-Package Costura.Fody
+
+-check it is added to your project.
+-rebuild
+
+-if error in: None Update
+  change to: None Include
+
+
+*/
+
